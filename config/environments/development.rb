@@ -64,7 +64,7 @@ Rails.application.configure do
        domain: "heroku.com",
        authentication: "login",
        enable_starttls_auto: true,
-       user_name: ENV["18559853770@163.com"],
-       password: ENV["Xingge1027"]
+       user_name: ENV["SEND_CLOUD_USER_NAME"],
+       password: ENV["SEND_CLOUD_USER_KEY"]
        }
 end
