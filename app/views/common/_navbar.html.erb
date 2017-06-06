@@ -2,30 +2,35 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">JDStore </a>
+            <a class="navbar-brand" href="/"> 逛吃市井 </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
               <li class="active">
-                <%= link_to("Products", products_path) %>
+                <%= link_to("成都人民最爱吃的市井小店", products_path) %>
+
               </li>
             </ul>
+
+
+
+
             <ul class="nav navbar-nav navbar-right">
                   <li>
                     <%= link_to carts_path  do  %>
-                    购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+                    吃什么呢？ <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
                     <% end %>
                   </li>
 
                   <% if !current_user %>
-                    <li><%= link_to("注册", new_user_registration_path) %> </li>
-                    <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+                    <li><%= link_to("加入逛吃市井大部队", new_user_registration_path) %> </li>
+                    <li><%= link_to(content_tag(:i, '准备开吃！', class: 'fa fa-sign-in'), new_user_session_path) %></li>
                   <% else %>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                          Hi!, <%= current_user.email %>
+                          懂吃会选的： <%= current_user.email %>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
@@ -36,16 +41,31 @@
                       <% end %>
 
                 <li>
-                 <%= link_to("个人订单列表", account_orders_path ) %>
+                 <%= link_to("已经吃过的美食清单", account_orders_path ) %>
                </li>
 
 
-                        <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+                        <li> <%= link_to(content_tag(:i, '吃的很安逸，回府', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
 
                       </ul>
                     </li>
                   <% end %>
             </ul>
+
+
+            <!--===== 搜索栏 =====-->
+               <div class="input-group search-box">
+                 <input type="text" class="form-control" name="keyword" placeholder="你要去吃的城市" value="">
+                 <div class="input-group-btn">
+                   <button class="btn btn-default" type="submit">
+                     <span><i class="fa fa-search"></i></span> <!-- 搜索栏图标 -->
+                  </button>
+                 </div>
+               </div>
+
+
+
+
         </div>
         <!-- /.navbar-collapse -->
     </div>

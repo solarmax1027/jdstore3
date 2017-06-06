@@ -18,29 +18,14 @@
                 <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
                 <div class="carousel-caption">
                   <h3>逛吃市井</h3> <!-- 标题 -->
-                  <p>本地资深吃货带你吃遍当地特色小吃</p> <!-- 内文 -->
+                  <p>旅游出行时，除了去吃所谓的“特色美食街”的第三个绝佳选择。</p> <!-- 内文 -->
+                  <p>像当地人一样，吃他们日常最常吃最爱吃的市井小店，才对得起自己挑剔的胃。</p>
+                  <p>从此，出门旅行，只吃当地最经典最传统的美食。</p>
+                  <p>本站所有美食，均是当地资深吃货诚心推荐。</p>
                 </div>
               <% end %>
             </div>
-            <div class="item">
-              <%= link_to '#', target: "_blank" do %>
-                <%= image_tag("intro_2.jpg") %>
-                <div class="carousel-caption">
-                  <h3>创造美食</h3>
-                  <p>最新创意食谱，每天都充满变化</p>
-                </div>
-              <% end %>
-            </div>
-            <div class="item">
-              <%= link_to '#', target: "_blank" do %>
-                <%= image_tag("intro_3.jpg") %>
-                <div class="carousel-caption">
-                  <h3>精选厨具</h3>
-                  <p>优质进口厨具，做菜更加便利</p>
-                </div>
-              <% end %>
-            </div>
-          </div>
+
 
           <!--===== 换页按钮 =====-->
           <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
@@ -86,44 +71,7 @@
     </div>
   </section>
 
-  <!--===== 商品分类 =====-->
-  <section class="categories-box">
-    <div class="row">
-      <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_1" do %> <!-- 分类连结 -->
-          <div class="category-box">
-            <%= image_tag("feedback_1.png") %> <!-- 分类图片 -->
-          </div>
-          <div>
-            <h3>王十三－带你吃卤煮</h3> <!-- 分类标题 -->
-            <p>卤煮火烧这东西看着简单，好像谁都能弄，但想要做的有滋有味干净好吃，却很要手艺。卤汤的味道，下货的口感，头肉的肥瘦，火烧的硬软，好多都是感觉出来的，非得跟了正经师傅学上几年，从洗肠烧火配料熬汤什么的做起，慢慢琢磨才能摸着门道。来北京，必须得去xx街里头史家胡同口上那个无名小店或者老鼓楼市场17号，点餐的时候一定要注意......</p> <!-- 分类介绍 -->
-          </div>
-        <% end %>
-      </div>
-      <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_2" do %>
-          <div class="category-box">
-            <%= image_tag("feedback_2.png") %>
-          </div>
-          <div>
-            <h3>吴哝囡－生煎包or生煎馒头？</h3>
-            <p>吃生煎做美好的地方在于生煎的锅盖底儿和汤汁。生煎的皮大，馅也大，还包进了滚烫的鲜汤。功夫不到家，不可能煎的滴汤不漏；不会吃或太心急，一口咬下去很容易被生煎的汤烫到。“皮薄不破又不焦，二分酵母靠烘烤，鲜馅汤汁满口来，底厚焦枯是败品。而如今所谓的“小x生煎”的做法与我要带你去的传统生煎做法的小店完全不是一个水平......</p>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_3" do %>
-          <div class="category-box">
-            <%= image_tag("feedback_3.png") %>
-          </div>
-          <div>
-            <h3>西安羊肉泡馍</h3>
-            <p>羊肉泡馍的套路，就比泡妞简单点</p>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
+
 
   <!--===== 推荐商品 =====-->
   <section class="show-box">
@@ -247,18 +195,97 @@
     </div>
   </section>
 
+
+
+  <!--===== 用户反馈 =====-->
+  <section class="feedback-box">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>用户反馈</h2> <!-- 副标题 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div id="feedback" class="carousel slide" data-ride="carousel">
+          <!--===== 轮播按钮 =====-->
+          <ol class="carousel-indicators">
+            <li data-target="#feedback" data-slide-to="0" class="active"></li>
+            <li data-target="#feedback" data-slide-to="1"></li>
+            <li data-target="#feedback" data-slide-to="2"></li>
+          </ol>
+
+          <!--===== 轮播内容 =====-->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p>这是我用过最好的网站，商品众多、下单方便、送货快速，还能订制特殊规格的锅具，强力推荐。</p>
+              <%= image_tag("feedback_1.png") %> <!-- 图片 -->
+              <strong>Eddie - 上班族</strong> <!-- 介绍 -->
+            </div>
+            <div class="item">
+              <p>我是这网站的忠实用户，已经在这买好几年了，质量一直很好，而且不定时会有折扣，真的很划算！</p>
+              <%= image_tag("feedback_2.png") %>
+              <strong>Anna - 家庭主妇</strong>
+            </div>
+            <div class="item">
+              <p>身为一个学生，预算不太多，却也能在这找到便宜又有设计感的器皿，让我生活又添加一份乐趣。</p>
+              <%= image_tag("feedback_3.png") %>
+              <strong>Kobe - 大学生</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--===== 商品分类 =====-->
+  <section class="categories-box">
+    <div class="row">
+      <div class="col-md-4 category-content">
+        <%= link_to '#' , class: "category_1" do %> <!-- 分类连结 -->
+          <div class="category-box">
+            <%= image_tag("feedback_1.png") %> <!-- 分类图片 -->
+          </div>
+          <div>
+            <h3>王十三－带你吃卤煮</h3> <!-- 分类标题 -->
+            <p>卤煮火烧这东西看着简单，好像谁都能弄，但想要做的有滋有味干净好吃，却很要手艺。卤汤的味道，下货的口感，头肉的肥瘦，火烧的硬软，好多都是感觉出来的，非得跟了正经师傅学上几年，从洗肠烧火配料熬汤什么的做起，慢慢琢磨才能摸着门道。来北京，必须得去xx街里头史家胡同口上那个无名小店或者老鼓楼市场17号，点餐的时候一定要注意......</p> <!-- 分类介绍 -->
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-4 category-content">
+        <%= link_to '#' , class: "category_2" do %>
+          <div class="category-box">
+            <%= image_tag("feedback_2.png") %>
+          </div>
+          <div>
+            <h3>吴哝囡－生煎包or生煎馒头？</h3>
+            <p>吃生煎做美好的地方在于生煎的锅盖底儿和汤汁。生煎的皮大，馅也大，还包进了滚烫的鲜汤。功夫不到家，不可能煎的滴汤不漏；不会吃或太心急，一口咬下去很容易被生煎的汤烫到。“皮薄不破又不焦，二分酵母靠烘烤，鲜馅汤汁满口来，底厚焦枯是败品。而如今所谓的“小x生煎”的做法与我要带你去的传统生煎做法的小店完全不是一个水平......</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-4 category-content">
+        <%= link_to '#' , class: "category_3" do %>
+          <div class="category-box">
+            <%= image_tag("feedback_3.png") %>
+          </div>
+          <div>
+            <h3>西安羊肉泡馍</h3>
+            <p>羊肉泡馍的套路，就比泡妞简单点</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
   <!--===== 合作品牌 =====-->
   <section class="brand-box">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <h2>合作品牌</h2> <!-- 副标题 -->
+        <h2>点评最多</h2> <!-- 副标题 -->
         <div class="short-line"></div> <!-- 分隔线 -->
         <%= image_tag("brand_1.png") %> <!-- 品牌图片 -->
         <%= image_tag("brand_2.png") %>
         <%= image_tag("brand_3.png") %>
         <%= image_tag("brand_4.png") %>
-        <%= image_tag("brand_5.png") %>
-        <%= image_tag("brand_6.png") %>
+
 
       </div>
     </div>
