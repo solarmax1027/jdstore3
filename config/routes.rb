@@ -45,6 +45,10 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  namespace :user do
+    resources :products
+  end
+
   root 'welcome#index'
 
 end
