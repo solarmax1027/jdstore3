@@ -25,3 +25,51 @@
     </div>
   </div>
 </div>
+
+<!--对商品评论以及评星-->
+  <div class="text-center col-lg-4">
+    <h3>综合评价</h3>
+    新鲜： <div class="star-freshness" data-score= <%= @avg_review %> ></div>
+    外观： <div class="star-look" data-score= <%= @avg_look %> ></div>
+    价格： <div class="star-price" data-score= <%= @avg_price %> ></div>
+  </div>
+
+  <div class="row review">
+    <div class="col-sm-12 col-md-12">
+      <h3 class="reviews_title">
+        <%= @product.reviews.count %> Reviews
+      </h3>
+      <hr>
+      <div id="reivews">
+        <div class="reviews_wrapper clearfix">
+            <div class="pull-left">
+              <% @reviews.each do |review| %>
+                新鲜： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
+                外观： <div class="star-look" data-score= <%= review.look %> ></div>
+                价格： <div class="star-price" data-score= <%= review.price %> ></div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <p class="lead"><%= review.body %></p>
+              </div>
+            </div>
+                <p>
+                    <small>Submitted
+                        <strong><%= time_ago_in_words(review.created_at) %>
+                            ago</strong>
+                        by <%= review.user.email %></small>
+                </p>
+                <div>
+                  <% if review.user == current_user %>
+                     <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+                  <% end %>
+                </div>
+                <% end %>
+          </div>
+        </div>
+        <hr>
+        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
+      </div>
+    </div>
+  </div>
+
+<script src="/assets/application.js"></script>

@@ -26,3 +26,47 @@ $(window).scroll(function () {
 		$('#navbar').removeClass('scroll_navbar') //navbar 移除 scroll_navbar CSS
 	}
 })
+
+<!-- 评价星星效果 -->
+$('.star-freshness').raty({
+			path: '/assets/',
+					readOnly: true,
+					score: function() {
+				return $(this).attr('data-score');
+			}
+});
+$('.star-look').raty({
+			path: '/assets/',
+					readOnly: true,
+					score: function() {
+				return $(this).attr('data-score');
+			}
+});
+$('.star-price').raty({
+			path: '/assets/',
+					readOnly: true,
+					score: function() {
+				return $(this).attr('data-score');
+			}
+});
+
+$('#star-freshness').raty({
+path: '/assets/',
+scoreName: 'review[freshness]'
+});
+
+$('#star-look').raty({
+path: '/assets/',
+scoreName: 'review[look]'
+});
+
+$('#star-price').raty({
+		path: '/assets/',
+		scoreName: 'review[price]'
+});
+
+
+<!-- 必须要选一颗星 -->
+$('#star-freshness img').eq(0).trigger('click')
+$('#star-look img').eq(0).trigger('click')
+$('#star-price img').eq(0).trigger('click')
