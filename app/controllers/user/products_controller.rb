@@ -39,6 +39,7 @@ def new
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
 
     if @product.save
       redirect_to user_products_path
