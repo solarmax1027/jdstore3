@@ -56,6 +56,7 @@ body {
 .navbar-default {
   background: rgba(255,200,0,1); //半透明背景
 
+
   /* 文字连结 */
   a {
     color: #fff !important;
@@ -70,7 +71,7 @@ body {
 
   /*===== 导览列滑动特效 ======*/
   &.scroll_navbar {
-    background-color: #fff; //背景颜色
+    background-color: #aaa; //背景颜色
 
     /* 文字连结 */
     a {
@@ -215,8 +216,8 @@ body {
     /* 标题 */
     h3 {
       margin-top: -40%; //标题高度
-      font-size: 50px; //文字大小
-      letter-spacing: 5px; //文字间距
+      font-size: 60px; //文字大小
+      letter-spacing: 3px; //文字间距
     }
 
     /* 内文 */
