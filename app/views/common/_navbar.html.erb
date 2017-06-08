@@ -40,9 +40,15 @@
                           </li>
                       <% end %>
 
-                <li>
-                 <%= link_to("已经吃过的美食清单", account_orders_path ) %>
-               </li>
+
+
+                        <li>
+                         <%= link_to("上传店铺", user_products_path ) %>
+                        </li>
+                        <li>
+                         <%= link_to("已经吃过的美食清单", account_orders_path ) %>
+                       </li>
+
 
 
                         <li> <%= link_to(content_tag(:i, '吃的很安逸，回府', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
