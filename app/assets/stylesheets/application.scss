@@ -20,9 +20,6 @@
    @import "font-awesome";
 
 
-
-
-
    /* login/sign-up */
    .facepanel {
          background-image: image_url("header.jpg");
@@ -491,4 +488,16 @@ body {
   padding: 75px 0 0 0;
   height: 200px;
   background: image_url("start.jpg") no-repeat scroll top center/ cover; //背景图片
+}
+
+/*===== 商品描述特效 =====*/
+.product-description {
+  margin: 30px auto;
+  font-size: 1.2em;
+  line-height: 1.8em;                   //拉开行高
+  text-align: justify;                  //文本两端对齐
+  img {
+    max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
+    border-radius: 6px;                 //为所有图片设置6px的圆角
+    }
 }
