@@ -48,6 +48,8 @@ end
  gem 'qiniu-rs'
  gem 'figaro'
  gem 'ratyrate'
+ gem 'ckeditor'
+
 
 
 group :development do

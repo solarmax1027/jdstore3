@@ -3,12 +3,12 @@
 <%= simple_form_for [:admin, @product] do |f| %>
 
   <div class="group">
-    <%= f.input :title %>
+    <%= f.input :title, :label => "标题" %>
   </div>
 
 
   <div class="group">
-    <%= f.input :description %>
+    <%= f.input :description, as: :ckeditor, :label => "店铺详情" %>
 
   </div>
 
@@ -22,7 +22,7 @@
   </div>
 
   <div class="group">
-    <%= f.input :image, as: :file %>
+    <%= f.input :image, as: :file, :label => "封面" %>
   </div>
 
    <%= f.submit "Submit", data: { disable_with: "Submitting..."}  %>
