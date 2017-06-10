@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
 
 
@@ -544,3 +545,52 @@ body {
   // background: lightgrey;
   // border: 0.5px;
 }
+
+
+
+
+// show页面布局
+.show-content {
+  margin-top: 50px;
+  border: 0.5px solid #ccc;
+  // padding: 5px;
+  // margin: 5% 0;
+  box-shadow: 2px 2px 1px #ccc;
+  transition: 0.5s;
+}
+
+
+
+//=======去除colum之间的默认间距=======
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row > div {
+//    background: lightgrey;
+//    border: 0.5px;
+// }
+//
+//  #price {
+//
+//   border-top: 0.5px solid lightgrey;
+//    border-bottom: 0.5px solid lightgrey;
+//    border-left: 0.5px solid lightgrey;
+//  }
+//
+//  #tag {
+//    border-top: 0.5px solid lightgrey;
+//    border-bottom: 0.5px solid lightgrey;
+//    border-right: 0.5px solid lightgrey;
+//  }
+//
+//  #indexPage {
+//    background-color: #F8F8FA;
+ }

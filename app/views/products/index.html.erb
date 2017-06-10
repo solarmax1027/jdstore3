@@ -29,16 +29,18 @@
 <div class="container-fluid" id="indexPage">
   <div class="container">
     <div class="row">
-
       <div class="col-md-2" style="background: #FFC800;margin-top:20px;padding-right:20px; height:350px;">
-        <p style="margin-top:100px;padding-left:20px;">正在更新，敬请期待！</p>
+        <p style="margin-top:100px;padding-left:20px;">一个人搜集经典小吃速度就是慢，大家快来注册上传！</p>
       </div>
+
+
 
       <div class="col-md-9 col-md-offset-1">
         <% @products.each do |product| %>
           <div class="row show-content" style="margin-top:20px;">
             <div class="row no-gutter ">
-              <div class="col-xs-12 col-md-3">
+
+              <div class="col-xs-12 col-md-4">
                 <%= link_to product_path(product) do %>
                   <% if product.image.present? %>
                     <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -47,41 +49,53 @@
                   <% end %>
                 <% end %>
               </div>
-            </div>
 
 
-              <div class="col-xs-12 col-md-9">
-               <small><%= product.cookname %></small>
-               <h5><%= link_to(product.title, product_path(product)) %></h5><br />
-               <small><%= product.location %></small>
+              <div class="col-xs-12 col-md-8">
+               <h5><%= product.title %></h5>
+               <h5><%= link_to(product.cookname, product_path(product)) %></h5>
              </div>
-           </div>
-
-
-
-
 
             <div class="row no-gutter" style="border-top: 0.5px solid #dfdfdf">
               <div class="col-xs-4 col-md-3" id="price">
-               <small style="margin-top:20px;">￥<%= product.price %></small>
+               <small style="margin-top:20px;">人均消费：<%= product.price %></small>
               </div>
 
-              <div class="col-xs-8 col-md-9" id="tag">
-              <small>#<%= product.location %></small> |
-              <small><span class="label label-default"><%= product.quantity %><span></small>
-            </div>
-            <br />
-          </div>
-        <% end %>
+              <br>
 
+              <div class="col-xs-8 col-md-6" id="tag">
+              <small>地址：<%= product.location %></small>
+              <br>
+              <br>
+              <small><%= product.description %></small>
+
+            </div>
+              </div>
+            </div>
+
+            <br />
+             </div>
+             <% end %>
       </div>
 
-    </div>
-  </div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+
+
+
   <div class="row">
       <div class="col-md-12">
         <div class="text-center">
         </div>
       </div>
     </div>
-</div>
