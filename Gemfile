@@ -49,7 +49,7 @@ end
  gem 'figaro'
  gem 'ratyrate'
  gem 'ckeditor'
-
+ gem 'social-share-button'
 
 
 group :development do

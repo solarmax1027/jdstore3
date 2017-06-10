@@ -2,21 +2,41 @@
 
 <%= simple_form_for [:user, @product] do |f| %>
 
+
   <div class="group">
-    <%= f.input :title, :label => "标题" %>
+    <%= f.input :title, :label => "店铺名称" %>
   </div>
+
+  <div class="group">
+    <%= f.input :cookname, :label => "必点菜品" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :location, :label => "所在城市＋位置" %>
+  </div>
+
 
   <div class="group">
     <%= f.input :description, as: :ckeditor, :label => "店铺详情" %>
+
   </div>
 
   <div class="group">
-    <%= f.input :quantity %>
+    <%= f.input :quantity, :label => "你已吃过几次？" %>
+  </div>
+
+
+  <div class="group">
+    <%= f.input :price, :label => "单人平均消费__RMB" %>
   </div>
 
   <div class="group">
-    <%= f.input :price %>
+    <%= f.input :image, as: :file, :label => "封面" %>
   </div>
+
+   <%= f.submit "Submit", data: { disable_with: "Submitting..."}  %>
+   <% end %>
+
 
 
       <% if @product.image.present? %>

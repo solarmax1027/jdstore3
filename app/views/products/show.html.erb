@@ -1,27 +1,27 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-4">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
-  </div>
+  </div> -->
 
-  <div class="col-md-4">
+  <!-- <div class="col-md-4">
     <h3>综合评价</h3>
     环境： <div class="star-freshness" data-score= <%= @avg_review %> ></div>
     服务： <div class="star-look" data-score= <%= @avg_look %> ></div>
     价格： <div class="star-price" data-score= <%= @avg_price %> ></div>
   </div>
-</div>
+</div> -->
 
-<div class="col-md-4">
+<!-- <div class="col-md-4">
   <h2> <%= @product.title %> </h2>
-    <div> 数量 : <%= @product.quantity %> </div>
+    <div> 推荐者吃过次数 : <%= @product.quantity %> </div>
       <div class="product-price"> ￥ <%= @product.price %> </div>
         <div class="pull-right">
           <% if @product.quantity > 0 %>
-          <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
+          <%= link_to("收藏这个菜", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
           <% else %>
             已销售一空，无法购买
             <% end %>
@@ -33,46 +33,115 @@
     <div class="product-description">
         <%= simple_format(@product.description) %>
     </div>
-</div>
+</div> -->
 
 
-<!--对商品评论以及评星-->
-  <div class="row review">
-    <div class="col-sm-12 col-md-12">
-      <h3>
-        客户评论
-      </h3>
-      <hr>
-      <div id="reivews">
-        <div class="reviews_wrapper clearfix">
-            <div class="pull-left">
-              <% @reviews.each do |review| %>
-                环境： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
-                服务： <div class="star-look" data-score= <%= review.look %> ></div>
-                价格： <div class="star-price" data-score= <%= review.price %> ></div>
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <p class="lead"><%= review.body %></p>
-              </div>
-            </div>
-                <p>
-                    <small>Submitted
-                        <strong><%= time_ago_in_words(review.created_at) %>
-                            ago</strong>
-                        by <%= review.user.email %></small>
-                </p>
-                <div>
-                  <% if review.user == current_user %>
-                     <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
-                  <% end %>
-                </div>
-                <% end %>
-          </div>
+<!-- 对商品评论以及评星-->
+
+
+
+
+
+<div class="container show-content">
+  <div class="row">
+    <div class="col-md-8" style="padding-center:0px;">
+      <% if @product.image.present? %>
+        <%= image_tag(@product.image.medium.url) %>
+      <% else %>
+        <%= image_tag("http://placehold.it/720x360&text=No Pic") %>
+      <% end %>
+    </div>
+    <div class="col-md-4" style="padding-left:0px;" >
+      <div class="container">
+        <!-- <br /><br />
+        <%= @product.location %> -->
+        <h2><%= @product.cookname %></h2>
+        <div style="height:40px;">
+          <p>来自：<%= @product.title %></p>
         </div>
-        <hr>
-        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
+        <div>推荐者吃过次数： <%= @product.quantity %></div><br>
+        <div class="product-price">单人平均消费：<%= @product.price %></div>
+        <br>
+        <div>分享到：<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat)) %>
+</div>
+          <br>
+          <br>
+          <br>
+
+
+        <div class="col-md-4">
+                <div class="col-md-12" style="padding-center:－0px;">
+                  <% if @product.quantity > 0 %>
+                  <%= link_to("收藏这个菜", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
+                  <% else %>
+                    已销售一空，无法购买
+                    <% end %>
+                </div>
+
+        </div>
+
+
+
+
       </div>
     </div>
   </div>
 
+  <hr>
+  <div class="row">
+    <div class="col-md-8" style="padding-left:30px;">
+      <%= simple_format(@product.description) %>
+    </div>
+    <div class="col-md-4">
+
+
+      <b>饭店位置</b>
+      <!-- <%= @product.location %> -->
+      <br>
+      <span class="label label-default"><%= @product.location %></span>
+
+    </div>
+  </div>
+
+<br>
+<br>
+
+<div class="row">
+<div class="col-md-8 ">
+  <h4 class="col-md-4">
+    客户评论
+  </h4>
+  <hr>
+  <div id="reivews">
+    <div class="reviews_wrapper clearfix">
+        <div class="pull-left">
+          <% @reviews.each do |review| %>
+            <p class="lead"><%= review.body %></p>
+          </div>
+        </div>
+            <p class="col-md-8">
+                <small>Submitted
+                    <strong><%= time_ago_in_words(review.created_at) %>
+                        ago</strong>
+                    by <%= review.user.email %></small>
+            </p>
+            <div>
+              <% if review.user == current_user %>
+                 <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+              <% end %>
+            </div>
+            <% end %>
+      </div>
+    </div>
+    <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
+  </div>
+</div>
+
 <script src="/assets/application.js"></script>
+
+</div>
+</div>
+
+
+
+<h3 class="text-center">你可能会喜欢的其他事件</h3><br />
