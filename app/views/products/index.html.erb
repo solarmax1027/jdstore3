@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
       <%= link_to product_path(product) do %>
@@ -11,4 +11,77 @@
       <%= product.title %> ￥ <%= product.price %>
     </div>
   <% end %>
+</div> -->
+
+
+
+    <!-- ===== 广告图 =====-->
+    <section class="intro-box">
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag("products_index_intro.jpg") %>
+        </div>
+      </div>
+    </section>
+
+
+<!-- <br> -->
+<div class="container-fluid" id="indexPage">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2" style="background: #FFC800;margin-top:20px;padding-right:20px; height:350px;">
+        <p style="margin-top:100px;padding-left:20px;">正在更新，敬请期待！</p>
+      </div>
+
+      <div class="col-md-9 col-md-offset-1">
+        <% @products.each do |product| %>
+          <div class="row show-content" style="margin-top:20px;">
+            <div class="row no-gutter ">
+              <div class="col-xs-12 col-md-3">
+                <%= link_to product_path(product) do %>
+                  <% if product.image.present? %>
+                    <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+
+
+              <div class="col-xs-12 col-md-9">
+               <small><%= product.cookname %></small>
+               <h5><%= link_to(product.title, product_path(product)) %></h5><br />
+               <small><%= product.location %></small>
+             </div>
+           </div>
+
+
+
+
+
+            <div class="row no-gutter" style="border-top: 0.5px solid #dfdfdf">
+              <div class="col-xs-4 col-md-3" id="price">
+               <small style="margin-top:20px;">￥<%= product.price %></small>
+              </div>
+
+              <div class="col-xs-8 col-md-9" id="tag">
+              <small>#<%= product.location %></small> |
+              <small><span class="label label-default"><%= product.quantity %><span></small>
+            </div>
+            <br />
+          </div>
+        <% end %>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+        </div>
+      </div>
+    </div>
 </div>

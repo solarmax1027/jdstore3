@@ -20,6 +20,9 @@
    @import "font-awesome";
 
 
+
+
+
    /* login/sign-up */
    .facepanel {
          background-image: image_url("header.jpg");
@@ -389,7 +392,7 @@ body {
   /* 图片 */
   img {
     width: 100%;
-    height: 170px;
+    height: auto;
 
 
   }
@@ -500,4 +503,44 @@ body {
     max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
     border-radius: 6px;                 //为所有图片设置6px的圆角
     }
+}
+
+
+/* 广告图 */
+ .intro-box {
+   text-align: center;
+
+   img {
+     width: 100%;
+     margin-bottom: 20px;
+   }
+ }
+
+
+//======product-index 页面布局======
+.show-content{
+  margin-top: 50px;
+  border: 0.5px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 2px 2px 1px #ccc;
+  transition: 0.5s;
+}
+
+
+//======去除colum之间的默认间距======
+.row.no-gutter{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row > div {
+  // background: lightgrey;
+  // border: 0.5px;
 }
