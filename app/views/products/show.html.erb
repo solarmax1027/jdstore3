@@ -44,14 +44,15 @@
 
 <div class="container show-content">
   <div class="row">
-    <div class="col-md-8" style="padding-center:0px;">
+    <div class="col-md-6" style="padding-center:0px;">
       <% if @product.image.present? %>
         <%= image_tag(@product.image.medium.url) %>
       <% else %>
         <%= image_tag("http://placehold.it/720x360&text=No Pic") %>
       <% end %>
     </div>
-    <div class="col-md-4" style="padding-left:0px;" >
+
+    <div class="col-md-6" style="padding-left:0px;" >
       <div class="container">
         <!-- <br /><br />
         <%= @product.location %> -->
@@ -64,38 +65,31 @@
         <br>
         <div>分享到：<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat)) %></div>
         <br>
-        <div class="col-md-4">
-          <b>店铺位置:</b>
-          <td>
-            <%= ChinaCity.get(@product.province) %>
-            <%= ChinaCity.get(@product.city) %>
-            <%= ChinaCity.get(@product.district) %>
-          </td>
-          <br>
-          <span class="label label-default"><%= @product.location %></span>
+        <br>
+
+            <!-- 測試用，顯示工作地點資訊 -->
+        <div class="col-md-6">
+            <p>地址：<%= @product.address %></p>
+
+          <!-- 顯示 Google Map -->
+
+              <div id="map"></div>
         </div>
-
-          <br>
-          <br>
-          <br>
-
-
-        <div class="col-md-4">
-                <div class="col-md-12" style="padding-center:－0px;">
-                  <% if @product.quantity > 0 %>
-                  <%= link_to("收藏这个菜", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
-                  <% else %>
-                    已销售一空，无法购买
-                    <% end %>
-                </div>
-        </div>
-
-
-
 
       </div>
     </div>
   </div>
+
+    <div class="col-md-12">
+      <% if @product.quantity > 0 %>
+      <%= link_to("收藏这个菜", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
+      <% else %>
+        已销售一空，无法购买
+        <% end %>
+    </div>
+
+  <br>
+  <br>
 
   <hr>
   <div class="col-md-12">
@@ -145,3 +139,17 @@
 <h3 class="text-center">你可能会喜欢的其他事件</h3><br />
 
 <script src="/assets/application.js"></script>
+
+<!-- Google Map 相關代碼 -->
+<!-- 請先取得 Google Map API Key（API 金鑰），並用取得的 API 金鑰取代「你的API金鑰」-->
+<script src="//maps.google.com/maps/api/js?key=AIzaSyCeQUPnC3rct8Cx-jaULZhwT4j3-cpEHxU"></script>
+<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>

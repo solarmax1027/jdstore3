@@ -82,6 +82,9 @@ ActiveRecord::Schema.define(version: 20170611002856) do
     t.string   "city"
     t.string   "district"
     t.string   "street"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "rates", force: :cascade do |t|

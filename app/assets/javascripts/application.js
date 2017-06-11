@@ -18,6 +18,8 @@
 //= require social-share-button
 //= require social-share-button/wechat
 //= require 'china_city/jquery.china_city'
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 
