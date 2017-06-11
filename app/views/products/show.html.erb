@@ -65,8 +65,12 @@
         <div>分享到：<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat)) %></div>
         <br>
         <div class="col-md-4">
-          <b>饭店位置</b>
-          <!-- <%= @product.location %> -->
+          <b>店铺位置:</b>
+          <td>
+            <%= ChinaCity.get(@product.province) %>
+            <%= ChinaCity.get(@product.city) %>
+            <%= ChinaCity.get(@product.district) %>
+          </td>
           <br>
           <span class="label label-default"><%= @product.location %></span>
         </div>

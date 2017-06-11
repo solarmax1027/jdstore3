@@ -10,10 +10,15 @@
     <%= f.input :cookname, :label => "必点菜品" %>
   </div>
 
-  <div class="group">
-    <%= f.input :location, :label => "所在城市＋位置" %>
+  <div class="city-group">
+    <%= f.select :province,  ChinaCity.list.unshift(["--省份--", 420000]), {}, class: "city-select "%>
+    <%= f.select :city,      ChinaCity.list(f.object.province).presence || [["--城市--", 422800]],    {}, class: "city-select " %>
+    <%= f.select :district,  ChinaCity.list(f.object.city).presence     || [["--地区--", 422827]],    {}, class: "city-select " %>
   </div>
 
+  <div class="group">
+    <%= f.input :location, :label => "具体位置" %>
+  </div>
 
   <div class="group">
     <%= f.input :description, as: :ckeditor, :label => "店铺详情" %>
