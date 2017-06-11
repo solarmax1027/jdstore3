@@ -50,6 +50,7 @@ end
  gem 'ratyrate'
  gem 'ckeditor'
  gem 'social-share-button'
+ gem 'china_city'
 
 
 group :development do
