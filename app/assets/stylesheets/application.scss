@@ -275,14 +275,19 @@ body {
     img {
       width: 100%;
 
+
+
     }
   }
+
+
+
 
   /*===== 换页按钮 =====*/
   .carousel-control {
     span {
       margin-top: 145%; //按钮高度
-      font-size: 50px; //按钮大小
+      font-size: 60px; //按钮大小
     }
   }
 }
@@ -594,3 +599,14 @@ body {
 //  #indexPage {
 //    background-color: #F8F8FA;
  }
+
+
+//=======首页评论轮播功能=======
+ .jumbotron2 {
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      background-color: #e6e6e6;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
