@@ -9,6 +9,11 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @reviews = @product.reviews
+
+    @hash = Gmaps4rails.build_markers(@product) do |product, marker|
+      marker.lat product.latitude
+      marker.lng product.longitude
+    end
   end
 
 

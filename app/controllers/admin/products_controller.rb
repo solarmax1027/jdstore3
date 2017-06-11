@@ -14,7 +14,7 @@ class Admin::ProductsController < ApplicationController
 
   def new
       @product = Product.new
-    end
+  end
 
     def edit
       @product = Product.find(params[:id])
@@ -50,6 +50,6 @@ class Admin::ProductsController < ApplicationController
     private
 
     def product_params
-      params.require(:product).permit(:title, :cookname, :location, :province, :city, :district, :description, :quantity, :price, :image)
+      params.require(:product).permit(:title, :cookname, :location, :province, :city, :district, :address, :latitude, :longitude, :description, :quantity, :price, :image)
     end
   end

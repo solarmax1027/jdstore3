@@ -603,6 +603,16 @@ body {
  }
 
 
+ // Google Map
+ #map{
+     width:80%; //寬，必須要有！
+     height:250px; //高，必須要有！
+     margin: 40px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+
 //=======首页评论轮播功能=======
  .jumbotron2 {
       background-repeat: no-repeat;
@@ -612,3 +622,4 @@ body {
       margin-bottom: 30px;
       padding-bottom: 30px;
     }
+

@@ -51,6 +51,9 @@ end
  gem 'ckeditor'
  gem 'social-share-button'
  gem 'china_city'
+ gem 'geocoder'
+ gem 'gmaps4rails'
+ gem 'underscore-rails'
 
 
 group :development do
