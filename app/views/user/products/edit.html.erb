@@ -30,14 +30,6 @@
     <%= f.input :price, :label => "单人平均消费__RMB" %>
   </div>
 
-  <div class="group">
-    <%= f.input :image, as: :file, :label => "封面" %>
-  </div>
-
-   <%= f.submit "Submit", data: { disable_with: "Submitting..."}  %>
-   <% end %>
-
-
 
       <% if @product.image.present? %>
       <span>目前商品图</span> <br>
