@@ -25,6 +25,31 @@
               <% end %>
             </div>
 
+            <div class="item ">
+              <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                <%= image_tag("intro_2.jpg") %> <!-- 图片位置 -->
+                <div class="carousel-caption">
+                  <h3>yummy-map</h3> <!-- 标题 -->
+                  <p>会员上传美食店菜品后经过100名专业试吃团试吃，一致好评后才推荐给您的经典美食，不辜负你的每一次味蕾之旅</p>
+                  <!-- <p>本站所有美食，均由全栈营资深吃货诚心推荐，欢迎试吃品尝。</p> -->
+
+                </div>
+              <% end %>
+            </div>
+
+
+            <div class="item ">
+              <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                <%= image_tag("intro_3.jpg") %> <!-- 图片位置 -->
+                <div class="carousel-caption">
+                  <h3>逛吃市井</h3> <!-- 标题 -->
+                  <p>会员上传店铺菜品差评超过3次自动下架，好评超过100次可申请开通打赏作者通道。你保证我们吃好，我们负责塞满你的腰包。</p>
+                  <!-- <p>本站所有美食，均由全栈营资深吃货诚心推荐，欢迎试吃品尝。</p> -->
+
+                </div>
+              <% end %>
+            </div>
+
 
           <!--===== 换页按钮 =====-->
           <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
@@ -41,56 +66,6 @@
   </section>
 
 
-
-
-  <!--===== 品牌故事 =====-->
-  <section class="story-box">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h2>公共交流区</h2> <!-- 区块标题 -->
-        <h5>交流／／评论／／寻店／／做法</h5>
-
-        <div class="short-line"></div> <!-- 分隔线 -->
-        <div class="row">
-          <div class="col-md-12">
-
-            <p>＃云吞面＃“在广州文化公园十三行路那一家老面馆，煮面的那个胖师傅的动作像极了在做推手，好像武功功底很深厚的样子，一年前我每每出差到哪里，必满心欢喜期待着吃上一碗，热腾腾的猪手云吞面，加上店主自制的白醋椒圈，好幸福好满足啊。。。时隔半载，再去时，已搬迁，慢慢的失落。。。有谁知道那家面馆哪去了？ ”</p> <!-- 创办人介绍 -->
-          </div>
-        </div>
-        <hr />
-
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <p>＃早起吃什么？＃：自从我喜欢的那家牛肉面馆因为拆迁而不知所踪之后，我再也没在7点之前起过床。 </p> <!-- 创办人介绍 -->
-          </div>
-        </div>
-        <hr />
-
-        <div class="row">
-          <div class="col-md-12">
-            <p>＃成都早餐＃ ：我上班的楼下有一家豆花面，那是四川腱为竹笋做的臊子面，这家店先把花生酱过滤了煮稀饭，比一般的花生浆稀饭口感细腻，泡菜也好吃，是我早餐最爱。</p> <!-- 创办人介绍 -->
-          </div>
-        </div>
-        <hr />
-
-        <div class="row">
-          <div class="col-md-12">
-            <p>＃鸡汤火锅＃ ：鸡汤火锅里面下上一把南方的细面，吃完能升天居然是真的。</p> <!-- 创办人介绍 -->
-          </div>
-        </div>
-        <hr />
-
-        <div class="row">
-          <div class="col-md-12">
-            <p>＃昆明不为人知的美食＃ ：起床了，去眠山哪里昆明市皮鞋厂职工楼铺面里的新发小吃甩碗大酥牛肉面去。人家一家都是皮鞋厂下岗的老昆明人，只卖早上哦，面条用的是虹山面粉厂送来的新鲜面／大酥牛肉昨晚熬的。汤／葱花／韭菜／腌菜／佐料自己放。别说我没告诉你哪里有好吃的。</p> <!-- 创办人介绍 -->
-          </div>
-        </div>
-        <hr />
-
-
-  </section>
 
 
 
@@ -126,6 +101,8 @@
       </div>
     </div>
   </section>
+
+
 
 
 
@@ -231,12 +208,124 @@
     </div>
   </section>
 
+
+
+
+
+
+
+  <section id="testimony" class="jumbotron">
+         <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+
+           <ol class="carousel-indicators">
+             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+           </ol>
+
+           <div class="container">
+             <div class="col-lg-12 text-center">
+                <h3>听听会员们怎么说</h3>
+              <hr class="star-secondary" style="margin-bottom: 10px">
+            </div>
+
+<!-- Wrapper for slides -->
+         <div class="carousel-inner testmonial" role="listbox">
+           <div class="item active">
+             <p>"坦白的讲，我现在去其他公司挖人才再也不用一直靠“大饼鸡汤了”，直接按照yummymap上推荐的饭馆，带这些牛逼的程序猿去吃最正宗的美食，三次下来他们已经跟在我身后面赶都赶不走了。"
+               <br>
+             <br><span style="font-style:normal;">罗永浩－锤子科技ceo</span></p>
+           </div>
+
+<div class="item">
+             <p>“喜欢上一个姑娘，终于决定鼓起勇气约她出来吃个饭，我已经从她闺蜜口中打听得知她最近老想吃饺子。可平常天天敲代码的我哪里知道哪儿的饺子做的好吃。突然想起来最近看到yummymap美食地图，据说经很多人试吃没有差评才推荐上来的饺子馆。吃完之后她说：毕业五六年第一次在外面吃到了在老家才能吃到的味道的饺子，看不出来你天天加班敲代码还挺会吃！”
+               <br>
+               <br>
+               <span style="font-style:normal;">nic－全栈营最会跳舞的人气讲师</span></p>
+           </div>
+
+<div class="item">
+             <p>"6月初做的计划和几个朋友一起去成都玩三天，因为已经不是第一次去了，景点都已经玩过一遍了，所有这次把重点放到了享受美食上。满街的xx火锅xx饭店，实在无从选择，打开点评网美食攻略等，林良满目，几个人往常每次都为吃什么讨论半天。幸而从全栈营了解到逛吃市井网站，经过100人专业试吃并无任何差评才推荐的小吃，绝对没错！ "
+               <br>
+               <br>
+               <span style="font-style:normal;">高姐－全栈营一期学员</span></p>
+           </div>
+         </div>
+         <!-- Left and right controls -->
+       <!-- <div class="control">
+           <a class="left carousel-control2" href="#myCarousel2" role="button" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+           </a>
+
+           <a class="right carousel-control2" href="#myCarousel2" role="button" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       </a>
+    </div> -->
+  </div>
+</div>
+</section>
+
+
+
+
+
+
   <section class="push-box">
 
-    <%= link_to('打开美食地图', products_path, class:'btn btn-push' ) %>
+    <%= link_to('开启味蕾之旅', products_path, class:'btn btn-push' ) %>
 
   </section>
 
+
+
+  <!--===== 品牌故事 =====-->
+  <section class="story-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>公共交流区</h2> <!-- 区块标题 -->
+        <h5>交流／／评论／／寻店／／做法</h5>
+
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div class="row">
+          <div class="col-md-12">
+
+            <p>＃云吞面＃“在广州文化公园十三行路那一家老面馆，煮面的那个胖师傅的动作像极了在做推手，好像武功功底很深厚的样子，一年前我每每出差到哪里，必满心欢喜期待着吃上一碗，热腾腾的猪手云吞面，加上店主自制的白醋椒圈，好幸福好满足啊。。。时隔半载，再去时，已搬迁，慢慢的失落。。。有谁知道那家面馆哪去了？ ”</p> <!-- 创办人介绍 -->
+          </div>
+        </div>
+        <hr />
+
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <p>＃早起吃什么？＃：自从我喜欢的那家牛肉面馆因为拆迁而不知所踪之后，我再也没在7点之前起过床。 </p> <!-- 创办人介绍 -->
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>＃成都早餐＃ ：我上班的楼下有一家豆花面，那是四川腱为竹笋做的臊子面，这家店先把花生酱过滤了煮稀饭，比一般的花生浆稀饭口感细腻，泡菜也好吃，是我早餐最爱。</p> <!-- 创办人介绍 -->
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>＃鸡汤火锅＃ ：鸡汤火锅里面下上一把南方的细面，吃完能升天居然是真的。</p> <!-- 创办人介绍 -->
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>＃昆明不为人知的美食＃ ：起床了，去眠山哪里昆明市皮鞋厂职工楼铺面里的新发小吃甩碗大酥牛肉面去。人家一家都是皮鞋厂下岗的老昆明人，只卖早上哦，面条用的是虹山面粉厂送来的新鲜面／大酥牛肉昨晚熬的。汤／葱花／韭菜／腌菜／佐料自己放。别说我没告诉你哪里有好吃的。</p> <!-- 创办人介绍 -->
+          </div>
+        </div>
+        <hr />
+
+
+  </section>
 
 
 
