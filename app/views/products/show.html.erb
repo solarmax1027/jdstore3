@@ -64,31 +64,33 @@
         <br>
         <div>分享到：<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat)) %></div>
         <br>
-        <div class="col-md-4">
-          <b>店铺位置:</b>
+
+          <p>店铺位置:
           <td>
             <%= ChinaCity.get(@product.province) %>
             <%= ChinaCity.get(@product.city) %>
             <%= ChinaCity.get(@product.district) %>
+            　
           </td>
-          <br>
+          </p>
+
           <span class="label label-default"><%= @product.location %></span>
-        </div>
+
 
           <br>
           <br>
-          <br>
 
 
-        <div class="col-md-4">
-                <div class="col-md-12" style="padding-center:－0px;">
+
+
+
                   <% if @product.quantity > 0 %>
                   <%= link_to("收藏这个菜", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-primary btn-lg btn-danger ") %>
                   <% else %>
                     已销售一空，无法购买
                     <% end %>
-                </div>
-        </div>
+
+
 
 
 
@@ -110,7 +112,7 @@
 <div class="row">
 <div class="col-md-8 ">
   <h4>
-    客户评论
+    吃户评论
   </h4>
   <hr>
   <div id="reivews">

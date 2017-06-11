@@ -101,8 +101,8 @@ body {
 /*===== Navbar 导览列 ======*/
 .navbar-default {
   background: rgba(255,200,0,1); //半透明背景
-
-
+  margin-bottom: 0;
+  // border-radius: 0;
   /* 文字连结 */
   a {
     color: #fff !important;
@@ -525,11 +525,13 @@ body {
 
 //======product-index 页面布局======
 .show-content{
+  margin-bottom: 0px;
+  margin-right: auto;
   margin-top: 50px;
-  border: 0.5px solid #ccc;
-  padding: 5px;
-  margin: 5% 0;
-  box-shadow: 2px 2px 1px #ccc;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10% 0;
+  box-shadow: 3px 3px 2px #ccc;
   transition: 0.5s;
 }
 
