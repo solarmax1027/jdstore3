@@ -35,7 +35,9 @@
           <%= product.price %>
         </td>
         <td>
+
           <%= product.user.try(:email) %>
+
         </td>
         <td>
           <%= link_to("Edit", edit_admin_product_path(product)) %>

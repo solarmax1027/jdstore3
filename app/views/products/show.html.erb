@@ -65,11 +65,13 @@
         <br>
         <div>分享到：<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat)) %></div>
         <br>
+
         <br>
 
             <!-- 測試用，顯示工作地點資訊 -->
         <div class="col-md-6">
-            <p>地址：<%= @product.address %></p>
+          <p>地址：<%= @product.address %></p>
+
 
           <!-- 顯示 Google Map -->
 
@@ -104,7 +106,7 @@
 <div class="row">
 <div class="col-md-8 ">
   <h4>
-    客户评论
+    吃户评论
   </h4>
   <hr>
   <div id="reivews">
@@ -135,7 +137,6 @@
 </div>
 
 
-
 <h3 class="text-center">你可能会喜欢的其他事件</h3><br />
 
 <script src="/assets/application.js"></script>
@@ -153,3 +154,4 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.fitMapToBounds();
 });
 </script>
+

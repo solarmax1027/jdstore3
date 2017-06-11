@@ -101,8 +101,8 @@ body {
 /*===== Navbar 导览列 ======*/
 .navbar-default {
   background: rgba(255,200,0,1); //半透明背景
-
-
+  margin-bottom: 0;
+  // border-radius: 0;
   /* 文字连结 */
   a {
     color: #fff !important;
@@ -275,14 +275,19 @@ body {
     img {
       width: 100%;
 
+
+
     }
   }
+
+
+
 
   /*===== 换页按钮 =====*/
   .carousel-control {
     span {
       margin-top: 145%; //按钮高度
-      font-size: 50px; //按钮大小
+      font-size: 60px; //按钮大小
     }
   }
 }
@@ -520,11 +525,13 @@ body {
 
 //======product-index 页面布局======
 .show-content{
+  margin-bottom: 0px;
+  margin-right: auto;
   margin-top: 50px;
-  border: 0.5px solid #ccc;
-  padding: 5px;
-  margin: 5% 0;
-  box-shadow: 2px 2px 1px #ccc;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10% 0;
+  box-shadow: 3px 3px 2px #ccc;
   transition: 0.5s;
 }
 
@@ -595,6 +602,7 @@ body {
 //    background-color: #F8F8FA;
  }
 
+
  // Google Map
  #map{
      width:80%; //寬，必須要有！
@@ -603,3 +611,15 @@ body {
      margin-left: auto;
      margin-right: auto;
  }
+
+
+//=======首页评论轮播功能=======
+ .jumbotron2 {
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      background-color: #e6e6e6;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+
