@@ -20,6 +20,8 @@
 //= require social-share-button
 //= require social-share-button/wechat
 //= require 'china_city/jquery.china_city'
+//= require material
+//= require ripples
 //= require_tree .
 
 
